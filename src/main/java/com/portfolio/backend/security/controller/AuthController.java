@@ -70,7 +70,7 @@ public class AuthController {
     
     @PostMapping("/login")
     @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
-    //@CrossOrigin(origins ="http://localhost:4200")
+    //@CrossOrigin(origins = "http://localhost:8080")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("verifique los datos ingresados"), HttpStatus.BAD_REQUEST);

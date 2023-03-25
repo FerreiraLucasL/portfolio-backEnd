@@ -23,7 +23,7 @@ public class HardSoftSkillController {
    
     @GetMapping("/hardsoftskill/get")
     @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
-    //@CrossOrigin(origins = "http://localhost:4200") 
+    //@CrossOrigin(origins = "http://localhost:8080")
     public ResponseEntity<List<HardSoftSkill>> getHardSoftSkill(){
         List<HardSoftSkill> skills=ihardSoftSkillServ.getHardSoftSkill();
         return new ResponseEntity<>(skills, HttpStatus.OK);    

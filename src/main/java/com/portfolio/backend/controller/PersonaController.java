@@ -19,7 +19,7 @@ public class PersonaController {
     
     @GetMapping("/persona/get/{id}")
     @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
-    //@CrossOrigin(origins = "http://localhost:4200") 
+    //@CrossOrigin(origins = "http://localhost:8080") 
     public ResponseEntity<Persona> getPersona (@PathVariable("id")Long id){
         Persona persona = iPersonaServ.findPersona(id);
         return new ResponseEntity<>(persona, HttpStatus.OK);

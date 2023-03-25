@@ -21,7 +21,7 @@ public class EducacionController {
     
     @GetMapping("/educacion/get")    
     @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
-    //@CrossOrigin(origins = "http://localhost:4200")    
+    //@CrossOrigin(origins = "http://localhost:8080")   
     public ResponseEntity<List<Educacion>> getEducacion(){
         List<Educacion> educaciones=ieducacionServ.getEducacion();
         return new ResponseEntity<>(educaciones, HttpStatus.OK);    

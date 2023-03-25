@@ -22,7 +22,7 @@ public class ExperienciaController {
     
     @GetMapping("/experiencia/get")
     @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
-    //@CrossOrigin(origins = "http://localhost:4200") 
+    //@CrossOrigin(origins = "http://localhost:8080")
     public ResponseEntity<List<Experiencia>> getExperiencia(){
         List<Experiencia> experiencias=iexperienciaServ.getExperiencia();
         return new ResponseEntity<>(experiencias, HttpStatus.OK);    
