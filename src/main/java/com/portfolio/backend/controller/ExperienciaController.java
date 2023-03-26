@@ -21,7 +21,7 @@ public class ExperienciaController {
     @Autowired IExperienciaServ iexperienciaServ;
     
     @GetMapping("/experiencia/get")
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:8080")
     public ResponseEntity<List<Experiencia>> getExperiencia(){
         List<Experiencia> experiencias=iexperienciaServ.getExperiencia();
@@ -30,7 +30,7 @@ public class ExperienciaController {
     
     
     @PostMapping("/experiencia/create")
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<Experiencia> createExperiencia(@RequestBody Experiencia exp){
         iexperienciaServ.saveExperiencia(exp);
@@ -38,7 +38,7 @@ public class ExperienciaController {
     }
     
     @DeleteMapping("/experiencia/delete/{id}")
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<?> deleteExperiencia(@PathVariable("id") Long id){
         iexperienciaServ.deleteExperiencia(id);
@@ -46,7 +46,7 @@ public class ExperienciaController {
     }
     
     @PutMapping ("/experiencia/edit/")
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<Experiencia> editExperiencia(@RequestBody Experiencia nuevaExp){
      Experiencia exp = iexperienciaServ.findExperiencia(nuevaExp.getId());

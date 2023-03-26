@@ -20,7 +20,7 @@ public class EducacionController {
     @Autowired IEducacionServ ieducacionServ;
     
     @GetMapping("/educacion/get")    
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:8080")   
     public ResponseEntity<List<Educacion>> getEducacion(){
         List<Educacion> educaciones=ieducacionServ.getEducacion();
@@ -28,7 +28,7 @@ public class EducacionController {
     }
     
     @PostMapping("/educacion/create")
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<Educacion> createEducacion(@RequestBody Educacion edu){
         ieducacionServ.saveEducacion(edu);
@@ -36,7 +36,7 @@ public class EducacionController {
     }
     
     @DeleteMapping("/educacion/delete/{id}")
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<?> deleteEducacion(@PathVariable("id") Long id){
         ieducacionServ.deleteEducacion(id);  
@@ -44,7 +44,7 @@ public class EducacionController {
     }
     
     @PutMapping ("/educacion/edit/")
-    @CrossOrigin(origins = "https://portfoliolucasferreira.web.app") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<Educacion> editEducacion(@RequestBody Educacion nuevaEdu){
         Educacion edu = ieducacionServ.findEducacion(nuevaEdu.getId());
