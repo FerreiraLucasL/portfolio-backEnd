@@ -22,7 +22,7 @@ public class HardSoftSkillController {
     @Autowired IHardSoftSkillServ ihardSoftSkillServ;    
    
     @GetMapping("/hardsoftskill/get")
-    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app") 
     //@CrossOrigin(origins = "http://localhost:8080")
     public ResponseEntity<List<HardSoftSkill>> getHardSoftSkill(){
         List<HardSoftSkill> skills=ihardSoftSkillServ.getHardSoftSkill();
@@ -31,7 +31,7 @@ public class HardSoftSkillController {
     
     
     @PostMapping("/hardsoftskill/create")
-    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<HardSoftSkill> createHardSoftSkill(@RequestBody HardSoftSkill hardSoftSkill){
         ihardSoftSkillServ.saveHardSoftSkill(hardSoftSkill);
@@ -39,7 +39,7 @@ public class HardSoftSkillController {
     }
     
     @DeleteMapping("/hardsoftskill/{id}")
-    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public String deleteHardSoftSkill(@PathVariable Long id){
         ihardSoftSkillServ.deleteHardSoftSkill(id);
@@ -47,7 +47,7 @@ public class HardSoftSkillController {
     }
     
     @PutMapping("/hardsoftskill/edit/{id}")
-    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
+    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app") 
     //@CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<HardSoftSkill> editHardSoftSkill(@PathVariable Long id,
                                            @RequestParam("nombreSkill")String nomSkill,
