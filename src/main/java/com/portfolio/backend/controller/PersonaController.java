@@ -18,8 +18,8 @@ public class PersonaController {
     @Autowired IPersonaServ iPersonaServ;
     
     @GetMapping("/persona/get/{id}")
-    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
-    //@CrossOrigin(origins = "http://localhost:8080") 
+    //@CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
+    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<Persona> getPersona (@PathVariable("id")Long id){
         Persona persona = iPersonaServ.findPersona(id);
         return new ResponseEntity<>(persona, HttpStatus.OK);
@@ -28,8 +28,8 @@ public class PersonaController {
     
       
     @PutMapping("/persona/edit/")    
-    @CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
-    //@CrossOrigin(origins = "http://localhost:4200") 
+    //@CrossOrigin(origins = "https://porfolio-front-end-ad5c6.web.app/") 
+    @CrossOrigin(origins = "http://localhost:4200") 
     public ResponseEntity<Persona> editPersona(@RequestBody Persona pers){
         Persona persona = iPersonaServ.findPersona(pers.getId());
         
